@@ -1,6 +1,5 @@
 import React from 'react'
 import { PersonaShape } from '../Shapes/index';
-import { bool, string, number, oneOf } from 'prop-types'
 
 function Persona(persona) {
     const {nombre, apellido, edad, mayorEdad, tipo} = persona;
@@ -17,11 +16,7 @@ function Persona(persona) {
 }
 
 Persona.PropTypes = {
-    nombre: string.isRequired, 
-    apellido: string, 
-    edad: number, 
-    mayorEdad: bool, 
-    tipo: oneOf(['Menor', 'Adulto']).isRequired
+    persona:PersonaShape
 }
 
 export default Persona

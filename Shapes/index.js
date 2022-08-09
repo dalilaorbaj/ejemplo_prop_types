@@ -1,4 +1,4 @@
-import {array, arrayOf, bool, number, shape, string} from 'prop-types'
+import {bool, number, shape, string, oneOf} from 'prop-types'
 
 /*Este shape lo uso para definir la estructura*/
 

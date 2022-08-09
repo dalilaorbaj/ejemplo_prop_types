@@ -4,16 +4,13 @@ import { array, arrayOf, shape } from 'prop-types'
 import Persona from "./Components/Persona"
 import { PersonaShape } from '../Shapes'
 
-const listado =[
-    {nombre:"Martin", apellido:"Esses", edad:35}
-]
 
-function ListadoPersonas(nombre, apellido, edad, mayorEdad, tipo) {
+function ListadoPersonas(personas) {
     return (
         <div>
             <h1>ListadoPersonas</h1>
-            {ListadoPersonas.map(persona=>
-                <Persona nombre={persona.nombre} apellido={persona.apellido} edad={persona.edad} />
+            {ListadoPersonas.map((persona, index)=>
+                <Persona persona={persona} key={index} />
             )}
         </div>
     )
@@ -21,7 +18,7 @@ function ListadoPersonas(nombre, apellido, edad, mayorEdad, tipo) {
 
 ListadoPersonas.PropTypes = {
     personas:arrayOf(PersonaShape)
-    /*Esto es para no estar repitiendo los propTypes */
+    /*Esto de PersonaShape es para no estar repitiendo los propTypes */
 }
 
 export default ListadoPersonas
